@@ -67,3 +67,17 @@ stories:
   - intent: affirm
   - action: utter_ask_customer
 
+
+- story: ask another services
+  steps:
+  - action: utter_ask_customer
+  - intent: ask_another_services
+  - action: utter_ask_view_products
+  - intent: affirm
+  - action: utter_list_category
+
+- story: view a list product
+  steps:
+  - action: utter_list_category
+  - intent: inform
+  - action: action_football_products;

@@ -5,23 +5,35 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+import random
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+
+class ActionFootballProducts(Action):
+    def name(self) -> Text:
+        return "action_football_products"
+
+
+ 
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+ 
+        user_choice = tracker.get_slot("choice")
+        dispatcher.utter_message(text=f"Đây là danh sách {user_choice} mà cửa hàng đang bán:")
+
+ 
+        if user_choice == "áo thể thao":
+            dispatcher.utter_message(text="Bấm vào đây: [Link áo thể thao](https://www.google.com)")
+        elif user_choice == "quần thể thao":
+            dispatcher.utter_message(text="Bấm vào đây: [Link quần thể thao](https://www.google.com)")
+        elif user_choice == "giày thể thao":
+            dispatcher.utter_message(text="Bấm vào đây: [Link giày thể thao](https://www.google.com)")
+        # else:
+        #     dispatcher.utter_message(text="Vui lòng nhập đúng tên danh sách:")
+ 
+        return []
+
+    
