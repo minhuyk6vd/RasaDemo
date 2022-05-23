@@ -1,0 +1,26 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Xin chào bạn! Tôi là trợ lý ảo Rasa. Tôi sẽ hỗ trợ bạn trong việc đặt sân bóng trên website này!"
+
+
+
+  utter_goodbye:
+  - text: "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày tốt lành."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

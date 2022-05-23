@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - xin chào
+    - chào
+    - có ai ở đây không
+    - ai đó giúp tôi với
+    - tôi cần giúp đỡ
+    - alo
+    - alo alo
+  
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - gặp sau nhé
+    - tôi sẽ liên hệ lại
+    - tôi sẽ nhắn tin lại
+    - tôi bận rồi
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - pp
+    - baibai
+    - bai bai
+    - see you
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng thế
+    - vâng
+    - ok
+    - okey
+    - oki
+    - okay
+    - uki
+    - đúng
+    - tôi thích
+    - được đấy
+    - tốt thôi
+    - ổn đấy
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - không 
+    - không được
+    - không ổn
+    - tôi không thích
+    - ko
+    - k
+
+
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
