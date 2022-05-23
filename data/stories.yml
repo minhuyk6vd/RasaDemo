@@ -2,29 +2,68 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: only greet
   steps:
   - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_greet 
+  - action: utter_ask_customer
   - intent: deny
   - action: utter_goodbye
+
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_customer
+  - intent: book_a_ground
+  - action: utter_ask_choose_ground
+
+
+- story: book a ground
+  steps:
+  - intent: book_a_ground
+  - action: utter_ask_choose_ground
+  - intent: duytan
+  - action: utter_ask_choose_time
+
+
+- story: choose time and date
+  steps:
+  - action: utter_ask_choose_time
+  - intent: time
+  - action: utter_ask_choose_date
+  - intent: date_info
+  - action: utter_show_available_ground
+  - action: utter_ask_choose_size_ground
+
+- story: show available ground
+  steps:
+  - action: utter_ask_choose_size_ground
+  - intent: san7
+  - action: utter_ask_confirm
+
+
+- story: confirm
+  steps:
+  - action: utter_ask_confirm
+  - intent: affirm
+  - action: utter_confirm
+  - action: utter_ask_another_request
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: deny another request
+  steps:
+  - action: utter_ask_another_request
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: affirm another request
+  steps:
+  - action: utter_ask_another_request
+  - intent: affirm
+  - action: utter_ask_customer
+

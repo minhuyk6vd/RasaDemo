@@ -5,22 +5,71 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - book_a_ground
+  - duytan
+  - time
+  - date_info
   - bot_challenge
+  - san7
+  - ask_available_ground
+
 
 responses:
   utter_greet:
-  - text: "Xin chào bạn! Tôi là trợ lý ảo Rasa. Tôi sẽ hỗ trợ bạn trong việc đặt sân bóng trên website này!"
+  - text: "Xin chào bạn! Tôi là trợ lý ảo Rasa."
 
+  utter_ask_customer:
+  - text: "Tôi có thể giúp gì cho bạn?"
 
+  utter_ask_choose_ground:
+  - text: "Bạn muốn thuê ở sân nào?"
+
+  utter_ask_choose_time:
+  - text: "Bạn muốn thuê lúc mấy giờ?"
+
+  utter_ask_choose_date:
+  - text: "Bạn muốn thuê ngày nào?"
+
+  utter_show_available_ground:
+  - text: "Còn 1 sân 5 và 1 sân 7 chưa được thuê."
+
+  utter_ask_choose_size_ground:
+  - text: "Bạn muốn thuê sân 5 hay sân 7?"
+
+  utter_ask_confirm:
+  - text: "Bạn muốn thuê sân 7 Duy Tân 
+  vào lúc 5 giờ chiều ngày mai phải không?"
+
+  utter_confirm:
+  - text: "Bạn đã thuê sân 7 Duy Tân 
+  vào lúc 5 giờ chiều ngày mai."
+
+  utter_ask_another_request:
+  - text: "Bạn cần gì nữa không?"
 
   utter_goodbye:
-  - text: "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. Chúc bạn một ngày tốt lành."
+  - text: "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. 
+  Chúc bạn một ngày tốt lành."
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Tôi là robot."
+
+actions: 
+  - utter_greet
+  - utter_ask_customer
+  - utter_ask_choose_ground
+  - utter_ask_choose_time
+  - utter_ask_choose_date
+  - utter_show_available_ground
+  - utter_ask_choose_size_ground
+  - utter_ask_confirm
+  - utter_confirm
+  - utter_ask_another_request
+  - utter_goodbye
+  - utter_iamabot
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+

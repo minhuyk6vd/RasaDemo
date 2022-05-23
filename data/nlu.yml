@@ -57,6 +57,10 @@ nlu:
     - được đấy
     - tốt thôi
     - ổn đấy
+    - phải
+    - đúng vậy
+    - phải rồi
+    
 
 - intent: deny
   examples: |
@@ -74,13 +78,58 @@ nlu:
     - ko
     - k
 
+- intent: book_a_ground
+  examples: |
+    - tôi muốn đặt một sân bóng
+    - tôi muốn book sân bóng
+    - tôi muốn thuê sân bóng
+    - đặt sân bóng
+    - book sân bóng
+    - thuê sân bóng
+
+- intent: duytan
+  examples: |
+    - sân Duy Tân
+    - Duy Tân
 
 
+- intent: time
+  examples: |
+    - 5h
+    - 5 giờ
+    - 5 giờ chiều
+    - 5 pm
+    - 5pm
+    - 17 giờ
+    - 5h chiều
+
+- intent: date_info
+  examples: |
+    - ngày mai
+    - mai
+    - chiều mai
+
+- intent: ask_available_ground
+  examples: |
+    - sân nào trống
+    - sân nào còn chỗ
+    - sân nào chưa ai đặt
+    - sân nào chưa ai thuê
+
+- intent: san7
+  examples: |
+    - sân 7
+    - 7
 
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - bạn là người hay robot
+    - bạn là người hả
+    - bạn là robot hả
+    - bạn có phải là robot không
+    - bạn có phải là con người không
+    - tôi đang nói chuyện với bot hả
+    - tôi đang nói chuyện với rotbot hả
+    - tôi đang nói chuyện với người hả
+    - tôi đang nói chuyện với con người hả
